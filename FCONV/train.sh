@@ -5,7 +5,7 @@ TRAIN=trainings/wmt18_en_zh
 # Fully convolutional sequence-to-sequence model
 mkdir -p $TRAIN/fconv
 CUDA_VISIBLE_DEVICES=0 fairseq-train $DATADIR --memory-efficient-fp16\
-  --arch fconv --mu 1000000 --me 50 \
+  --arch fconv --mu 1000000 --me 500 \
   --max-tokens 2048 \
   --lr 0.00005 --clip-norm 0.1 --dropout 0.2 --min-lr 1e-09\
   --update-freq 1 \
