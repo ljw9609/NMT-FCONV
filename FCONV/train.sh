@@ -12,4 +12,4 @@ CUDA_VISIBLE_DEVICES=0 fairseq-train $DATADIR --memory-efficient-fp16\
   --criterion label_smoothed_cross_entropy --label-smoothing 0.1 \
   --lr-scheduler fixed --force-anneal 50 \
   --no-epoch-checkpoints --save-interval-updates 100000 --keep-interval-updates 1\
-  --save-dir TRAIN/fconv \
+  --save-dir $TRAIN/fconv \
