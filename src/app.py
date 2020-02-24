@@ -4,7 +4,7 @@ from fairseq.models.lightconv import LightConvModel
 
 import os
 
-PATH = os.path.join(os.path.dirname(__file__), '../FCONV/wmt17.zh-en.lightconv-glu')
+PATH = os.path.join(os.path.dirname(__file__), '../wmt17.zh-en.lightconv-glu')
 
 zh2en = LightConvModel.from_pretrained(
     PATH,
