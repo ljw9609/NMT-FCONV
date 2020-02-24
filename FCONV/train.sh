@@ -62,8 +62,6 @@ mkdir -p $TRAIN/fconv
 
 CUDA_VISIBLE_DEVICES=0 fairseq-train $DATADIR --memory-efficient-fp16 \
     --lr 0.25 --clip-norm 0.1 --dropout 0.2 --max-tokens 2048 \
-    -nenclayer 4 -nlayer 3 -batchsize 16 \
-    -momentum 0.99 -timeavg -bptt 0 \
     --source-lang en --target-lang zh \
     --min-lr '1e-09' \
     --criterion label_smoothed_cross_entropy --label-smoothing 0.1 \
