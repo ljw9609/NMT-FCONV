@@ -37,8 +37,8 @@ CUDA_VISIBLE_DEVICES=0 fairseq-train $DATADIR --memory-efficient-fp16 \
   --criterion label_smoothed_cross_entropy --label-smoothing 0.1 \
   --lr-scheduler inverse_sqrt \
   --ddp-backend=no_c10d \
-  --max-epoch 5 \
-  --max-update 10000 --warmup-updates 4000 --warmup-init-lr '1e-07' \
+  --max-epoch 50 \
+  --max-update 100000 --warmup-updates 4000 --warmup-init-lr '1e-07' \
   --no-epoch-checkpoints --save-interval-updates 100000 --keep-interval-updates 1\
   --adam-betas '(0.9, 0.98)' --keep-last-epochs 2 \
   --dropout 0.3 --attention-dropout 0.1 --weight-dropout 0.1 \
