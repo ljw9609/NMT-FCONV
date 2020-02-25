@@ -62,7 +62,7 @@ mkdir -p $TRAIN/fconv
 
 CUDA_VISIBLE_DEVICES=0 fairseq-train $DATADIR --memory-efficient-fp16 \
     --lr 0.25 --clip-norm 0.1 --dropout 0.2 --max-tokens 2048 \
-    --source-lang en --target-lang zh \
+    --source-lang zh --target-lang en \
     --min-lr '1e-09' \
     --criterion label_smoothed_cross_entropy --label-smoothing 0.1 \
     --lr-scheduler fixed --force-anneal 50 \
