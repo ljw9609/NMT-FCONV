@@ -66,8 +66,8 @@ CUDA_VISIBLE_DEVICES=0 fairseq-train $DATADIR --memory-efficient-fp16 \
     --min-lr '1e-09' \
     --criterion label_smoothed_cross_entropy --label-smoothing 0.1 \
     --lr-scheduler fixed --force-anneal 50 \
-    --max-update 100000 --max-epoch 25 \
-    --no-epoch-checkpoints --save-interval-updates 10000 --keep-interval-updates 1 \
+    --max-update 500000 --max-epoch 100 \
+    --no-epoch-checkpoints --save-interval-updates 100000 --keep-interval-updates 1 \
     --keep-last-epochs 2 \
     --arch fconv \
     --save-dir $TRAIN/fconv
