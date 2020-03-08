@@ -1,9 +1,9 @@
 DATADIR=data-bin/wmt18_en_zh
 BPEDIR=data/wmt18_en_zh
-MODEL=trainings/wmt18_en_zh/fconv/checkpoint_best.pt
+#MODEL=trainings/wmt18_en_zh/fconv/checkpoint_best.pt
+MODEL=./checkpoint_best.pt
 
 fairseq-interactive $DATADIR \
-  --memory-efficient-fp16 \
   --path $MODEL \
   -s en -t zh \
   --tokenizer moses \
