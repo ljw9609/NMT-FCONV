@@ -2,4 +2,6 @@
 #tar -xzvf ./FCONV/wmt17.zh-en.lightconv-glu.tar.gz
 python -m nltk.downloader all
 
-gunicorn --config ./conf/gunicorn_config.py src:app
+nohup gunicorn --config ./conf/gunicorn_config.py src:app &
+
+/bin/bash
